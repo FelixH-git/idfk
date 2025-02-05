@@ -72,10 +72,10 @@ void loop()
       BLEAdvertisedDevice device = results->getDevice(i);
           
         int rssi = device.getRSSI();
-        int zoom_value = 1000 - ((best * -1) * 12);
+        int zoom_value = 1000 - ((rssi * -1) * 12);
         lv_obj_t * new_star = create_new_star(zoom_value);
         stars[i] = new_star;
-        lv_img_set_zoom(new_star, rssi_zoom);
+        //lv_img_set_zoom(new_star, zoom_value);
 
         if(i == (count - 1)){
           clear = true;
