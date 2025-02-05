@@ -9,10 +9,6 @@
 
 //ui_Image3 = lv_img_create(ui_Screen1);
 
-int i = 200;
-bool otherway = false;
-
-const int CUTOFF = -60;
 bool clear = false;
 void setup()
 {       
@@ -25,12 +21,12 @@ void setup()
 
 }
 
-lv_obj_t * create_new_star(int rssi_zoom){
+void create_new_star(int rssi_zoom){
     lv_obj_t * new_star;
 
     new_star = lv_img_create(ui_Screen1);
-    int x = random(172);
-    int y = random(160);
+    int x = random(22, 172 - 22);
+    int y = random(22, 160);
 
     lv_img_set_src(new_star, &ui_img_greenstar_png);
     lv_obj_set_width(new_star, LV_SIZE_CONTENT);   /// 22
@@ -41,8 +37,6 @@ lv_obj_t * create_new_star(int rssi_zoom){
     lv_obj_add_flag(new_star, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
     lv_obj_clear_flag(new_star, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
     lv_img_set_zoom(new_star, rssi_zoom);
-
-    return new_star;
 }
 
 
@@ -56,7 +50,6 @@ void loop()
 
   BLEScanResults* results = scan->start(1);
 
-  int best = CUTOFF;
   int count = results->getCount();
   lv_obj_t* stars[count];
 
@@ -64,23 +57,27 @@ void loop()
 
     if(clear == true){
       lv_obj_del(stars[i]);
+      
       if(i == (count - 1)){
         clear = false;
+        memset(stars, 0, sizeof(stars));
       }
     }
     else{
       BLEAdvertisedDevice device = results->getDevice(i);
           
         int rssi = device.getRSSI();
-        int zoom_value = 1000 - ((rssi * -1) * 12);
-        lv_obj_t * new_star = create_new_star(zoom_value);
-        stars[i] = new_star;
-        //lv_img_set_zoom(new_star, zoom_value);
+        int zoom_value = 800 - ((rssi * -1) * 7);
+        if(zoom_value < 0){
+          zoom_value = 0;
+        }
+        create_new_star(zoom_value);
 
         if(i == (count - 1)){
           clear = true;
         }
     }
+
     
   }
   

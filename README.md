@@ -1,7 +1,8 @@
 
 An RSSI BLE based distance sensor, with some fancy ass hacker graphics, fucking based. 
 (do not use this, the code is bad, i dont like lvgl), rn(idk why) it just draws how many fkin devices
-are nearby, does not draw them with a ceratin zoom which pisses me off
+are nearby, does not draw them with a ceratin zoom which pisses me off.
+Please do not run the code, it resets after drawing the devices because of an overloaded buffer(idk how to solve)
 
 
 buy a 
