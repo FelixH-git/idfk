@@ -9,4 +9,7 @@ ESP32-C6-LCD-1.47
 ```
 link: https://www.electrokit.com/en/utvecklingskort-med-esp32-c6-och-microlcd-172x320px
 
+
+Here the mf is, look at it
+so cool
 <img src="Notes_250205_140506_832.png" width="200">
