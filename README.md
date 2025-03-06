@@ -1,18 +1,17 @@
 
-An RSSI BLE based distance sensor, with some fancy ass hacker graphics, fucking based. 
-(do not use this, the code is bad, i dont like lvgl), rn(idk why) it just draws how many fkin devices
-are nearby, does not draw them with a ceratin zoom which pisses me off.
-Please do not run the code, it resets after drawing the devices because of an overloaded buffer(idk how to solve)
+An RSSI BLE-based distance sensor with some cool hacker-style graphics—very nice!
 
+(Do not use this code; it's not great, and I don't like LVGL.) Right now, for some reason, it just displays the number of nearby devices instead of positioning them with a certain zoom, which is frustrating.
 
-buy a 
+Please do not run the code—it resets after drawing the devices due to an overloaded buffer (not sure how to fix that).
+
+Buy an
 ```
 ESP32-C6-LCD-1.47
 ```
-and then flash with Arduino IDE 
+and flash it with the Arduino IDE.
 
-link: https://www.electrokit.com/en/utvecklingskort-med-esp32-c6-och-microlcd-172x320px
+Link: Electrokit ESP32-C6-LCD-1.47
 
-Here the mf is, look at it
-so cool
-<img src="Notes_250205_140506_832.png" width="200">
+Here's the device—check it out! So cool:
+<img src="Notes_250205_140506_832.png" width="200"
