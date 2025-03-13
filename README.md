@@ -14,4 +14,4 @@ and flash it with the Arduino IDE.
 Link: [Electrokit ESP32-C6-LCD-1.47](https://www.electrokit.com/utvecklingskort-med-esp32-c6-och-microlcd-172x320px?gad_source=1&gclid=CjwKCAiArKW-BhAzEiwAZhWsIBWD64QpeQf42ULpDDjuJYWTeBPlGst_46j3RL4FmcVKNMELZseAfBoCg9YQAvD_BwE)
 
 Here's the device—check it out! So cool:
-<img src="Notes_250205_140506_832.png" width="200"
+<img src="Notes_250205_140506_832.png" width="200">
